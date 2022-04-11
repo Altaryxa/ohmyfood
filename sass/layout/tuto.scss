@@ -5,6 +5,7 @@
 
 .tuto {
     counter-reset: steps;
+    margin-bottom: 2rem;
     & ol {
         display: flex;
         gap: 2rem;
@@ -27,6 +28,8 @@
             position: absolute;
             bottom: variables.$tuto-bullet-height;
             left: -1 * variables.$tuto-bullet-height;
+            top: 50%;
+            transform: translateY(-50%);
         }
         list-style-type: none;
         background-color: #f6f6f6;

@@ -1,0 +1,22 @@
+{
+  "name": "ohmyfood",
+  "version": "1.0.0",
+  "description": "oc ohmyfood",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch style.scss style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Altaryxa/Ohmyfood.git"
+  },
+  "author": "Florian Vanhove",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Altaryxa/Ohmyfood/issues"
+  },
+  "homepage": "https://github.com/Altaryxa/Ohmyfood#readme",
+  "dependencies": {
+    "sass": "^1.50.0"
+  }
+}

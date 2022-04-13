@@ -1,21 +1,24 @@
 @use "../utils/variables";
 @use "../utils/colors";
+@use "../utils/mixins";
 
-.menus {
-    background-color: #f6f6f6;
-    margin-bottom: 2rem;
+#homepage {
 
-    .menus__cards {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);        
-        gap: 2rem;
-        @media (max-width: variables.$breakpoint) {
-            grid-template-columns: repeat(1, 1fr);
-        }
-        .new {
-            position: relative;
-        }
-        .new::before {
+    .menus {
+        background-color: #f6f6f6;
+        margin-bottom: 2rem;
+        
+        .menus__cards {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);        
+            gap: 2rem;
+            @media (max-width: variables.$breakpoint) {
+                grid-template-columns: repeat(1, 1fr);
+            }
+            .new {
+                position: relative;
+            }
+            .new::before {
             content: "Nouveau";
             position: absolute;
             height: 2rem;
@@ -28,52 +31,25 @@
             top: 1rem;
         }
     }
-
-    .card {
-        &__image {
-            height: 15rem;
-            border-radius: 1rem 1rem 0 0;
-            background-size: cover;
-        }
-        @for $i from 1 through 4 {
-            &__image-#{$i} {
-                background-image: url("assets/menu-#{$i}.jpg");
+    
+        .card {
+            &__image {
+             height: 15rem;
+                border-radius: 1rem 1rem 0 0;
+                background-size: cover;
             }
-        }
-        &__description {
-            background-color: white;
-            border-radius: 0 0 1rem 1rem;
-            position: relative;
-            h3, p {
-                padding: 0.3rem;
-
+            @for $i from 1 through 4 {
+                &__image-#{$i} {
+                   background-image: url("assets/menu-#{$i}.jpg");
+             }
             }
-            i {
-                font-size: 2rem;
-                position: absolute;
-                right: 1rem;
-                top: 50%;
-                transform: translateY(-50%) ;
-            }
-            .fas {
-                color: transparent;
-                background-image: linear-gradient(to right top, #FF79DA, #9356DC);
-                background-clip: text;
-                -webkit-background-clip: text;
-                opacity: 0;
-                transition: all 200ms ease-in-out;
-            }
-            .far {
-                transition: all 200ms ease-out;
-            }
-            &:hover .fas {
-                opacity: 1;
-            }
-            &:hover .far {
-                opacity: 0;
+            &__description {
+                @include mixins.heart-animated;
+            
+                h3, p {
+                  padding: 0.3rem;   
+             }
             }
         }
     }
-
 }
-

@@ -37,13 +37,13 @@
     -webkit-background-clip: text;
     opacity: $opacity;
     transition: all 200ms ease-in-out;
+    font-weight: $font-weight;
 }
 
 @mixin heart-animated {
     position: relative;
     background-color: white;
     border-radius: 0 0 1rem 1rem;
-    
     &::before {
         @include heart;
     }

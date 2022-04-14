@@ -52,6 +52,7 @@ body {
             text-transform: uppercase;
             font-weight: 300;
             position: relative;
+            margin-bottom: 1.5rem;
             &::after {
                 content: "";
                 position: absolute;
@@ -64,14 +65,21 @@ body {
         }
 
         .menus__category {
-            overflow: hidden;
+            overflow: hidden;           
             .menu-item {
+                @for $i from 2 through 10 {
+                    &:nth-child(#{$i}) {
+                        animation-delay: 300ms * $i;
+                    }
+                }
                 display: flex;
                 background-color: white;
                 border-radius: 1rem;
                 overflow: hidden;
                 margin: 0.5rem;
                 @include mixins.box-shadow;
+                animation: appear 1s;
+                animation-fill-mode: both;
                 .menu-item__price {
                     margin-left: auto;
                     font-weight: 900;
@@ -99,12 +107,13 @@ body {
                     width: $button-width;
                     transition: margin-right 0.5s;
                     i {
+                        $size: 2rem;
                         display: grid;
                         place-items: center;
                         color: colors.$turquoise;
                         background: white;
-                        aspect-ratio: 1;
-                        width: 2rem;
+                        height: $size;
+                        width: $size;
                         border-radius: 1rem;
                     }
                 }

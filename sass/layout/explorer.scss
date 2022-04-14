@@ -1,4 +1,5 @@
 @use "../utils/mixins";
+@use "../utils/colors";
 
 .explorer {
     text-align: center;
@@ -29,7 +30,7 @@
     animation: disappear 1ms 2s forwards;
     transform-origin: top;
     .fas {
-        @include mixins.gradient-heart;
+        color: colors.$purple;
     }
 }
 

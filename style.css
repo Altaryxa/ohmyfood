@@ -24,6 +24,10 @@ h1, h2, h3, h4, h5, h6, p {
   margin: 0;
 }
 
+h2 {
+  margin: 1rem 0 1rem 0;
+}
+
 a {
   text-decoration: none;
   color: inherit;
@@ -100,7 +104,7 @@ header {
   transform-origin: top;
 }
 .loader .fas {
-  background-image: linear-gradient(to right top, #FF79DA, #9356DC);
+  color: #9356DC;
 }
 
 @keyframes disappear {
@@ -187,7 +191,8 @@ header {
   content: "Nouveau";
   position: absolute;
   height: 2rem;
-  width: 5rem;
+  width: 6rem;
+  border-radius: 0.3rem;
   background-color: #99e2d0;
   color: #278870;
   display: grid;
@@ -259,6 +264,7 @@ header {
   transition: all 200ms ease-in-out;
   font-weight: 900;
   background-image: linear-gradient(to right top, #FF79DA, #9356DC);
+  cursor: pointer;
 }
 #homepage .menus .card__description:hover::before {
   opacity: 0;
@@ -266,8 +272,11 @@ header {
 #homepage .menus .card__description:hover::after {
   opacity: 1;
 }
-#homepage .menus .card__description h3, #homepage .menus .card__description p {
-  padding: 0.3rem;
+#homepage .menus .card__description h3 {
+  padding: 1rem 0 0 1rem;
+}
+#homepage .menus .card__description p {
+  padding: 0 0 1rem 1rem;
 }
 
 footer {
@@ -374,6 +383,7 @@ body {
   transition: all 200ms ease-in-out;
   font-weight: 900;
   background-image: linear-gradient(to right top, #FF79DA, #9356DC);
+  cursor: pointer;
 }
 #page-resto .resto__title h2:hover::before {
   opacity: 0;
@@ -483,9 +493,6 @@ body {
   height: 2rem;
   width: 2rem;
   border-radius: 1rem;
-}
-#page-resto .menus .menus__category .menu-item:hover {
-  cursor: pointer;
 }
 #page-resto .menus .menus__category .menu-item:hover .menu-item__check {
   margin-right: 0;

@@ -22,7 +22,8 @@
             content: "Nouveau";
             position: absolute;
             height: 2rem;
-            width: 5rem;
+            width: 6rem;
+            border-radius: 0.3rem;
             background-color: colors.$turquoise;
             color: darken(colors.$turquoise, $amount: 40%);
             display: grid;
@@ -46,9 +47,12 @@
             &__description {
                 @include mixins.heart-animated;
             
-                h3, p {
-                  padding: 0.3rem;   
-             }
+                h3 {
+                    padding: 1rem 0 0 1rem;   
+                }
+                p {
+                    padding: 0 0 1rem 1rem;
+                }
             }
         }
     }

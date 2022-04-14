@@ -50,6 +50,7 @@
     &::after {
         @include heart($opacity: 0, $font-weight: 900, $color: transparent);
         @include gradient-heart;
+        cursor: pointer;
     }
     &:hover::before{
         opacity: 0;

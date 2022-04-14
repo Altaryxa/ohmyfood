@@ -4,7 +4,8 @@
   "description": "oc ohmyfood",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch style.scss style.css"
+    "sass": "sass --watch style.scss style.css",
+    "build": "postcss style.css -u autoprefixer -o ./build/style.min.css"
   },
   "repository": {
     "type": "git",
@@ -17,6 +18,11 @@
   },
   "homepage": "https://github.com/Altaryxa/Ohmyfood#readme",
   "dependencies": {
+    "autoprefixer": "^10.4.4",
     "sass": "^1.50.0"
+  },
+  "devDependencies": {
+    "postcss": "^8.4.12",
+    "postcss-cli": "^9.1.0"
   }
 }
